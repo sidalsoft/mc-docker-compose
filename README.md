@@ -3,8 +3,12 @@
 ### Runbook:
 
 ``````
-docker-compose up -d mc1
-docker-compose up -d mc3
-docker-compose up -d mc2 
-docker logs -f mc1
+docker compose down
+sudo docker compose up -d mc1
+sudo docker compose up -d mc3
+
+// sleep 2s
+
+sudo docker compose up -d mc2 
+sudo docker logs -f mc1
 ``````

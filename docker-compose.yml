@@ -8,7 +8,7 @@ services:
     volumes:
       - mc1_db_data:/var/lib/mysql
     ports:
-      - "3308:3306"
+      - "3310:3306"
     environment:
       MARIADB_ROOT_PASSWORD: root
       MARIADB_DATABASE: db_mc1
@@ -71,7 +71,7 @@ services:
     volumes:
       - "zookeeper_data:/bitnami"
     ports:
-      - "2181:2181"
+      - "2195:2181"
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
 
@@ -80,7 +80,7 @@ services:
     depends_on:
       - zookeeper
     ports:
-      - "9092:9092"
+      - "9095:9092"
     volumes:
       - "kafka_data:/bitnami"
     environment:
